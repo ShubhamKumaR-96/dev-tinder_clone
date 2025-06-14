@@ -1,0 +1,22 @@
+{
+  "name": "devtinder-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "nodejs,javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "dev for tinder",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
