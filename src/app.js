@@ -1,13 +1,14 @@
 import express from 'express'
+import { userAuth } from './middleware/auth.js'
 
 const app=express()
 
-app.get('/test',(req,res)=>{
+app.use('/user',userAuth,(req,res)=>{
     res.json("Testing for request handlers")
 })
 
-app.use('/hello',(req,res)=>{
-    res.send({msg:"Say to hello from request"})
+app.get('/hello',(req,res)=>{
+    res.send({msg:"Say to hello from user account"})
 })
 
 app.listen(3001,()=>{
