@@ -66,9 +66,10 @@ app.patch("/updateUser", async (req, res) => {
   try {
     const updatedData = await userModel.findByIdAndUpdate(userId, data, {
       new: true,
+      runValidators: true,
     });
 
-    res.json({msg:"user data updated succesfully", updatedData});
+    res.json({ msg: "user data updated succesfully", updatedData });
   } catch (error) {
     console.log("error while deleting  the data", error);
     res.status(500).json({ msg: "user not found" });
